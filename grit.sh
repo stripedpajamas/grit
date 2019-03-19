@@ -1,5 +1,5 @@
 function grit() {
-    if [ ! -d "$DIRECTORY" ]; then
+    if [ ! -d ".git" ]; then
         read -p "Not in a git repo, run git init? " -n 1 -r
         echo
         if [[ $REPLY =~ ^[Yy]$ ]]; then
