@@ -8,9 +8,9 @@ function grit() {
             return
         fi
     fi
-    git config user.email "stripedpajamas273@gmail.com"
-    git config user.name "Peter Squicciarini"
+    git config user.email "$GITHUB_EMAIL"
+    git config user.name "$GITHUB_NAME"
     git config commit.gpgsign true
-    git config user.signingkey "$GITHUB_GPG_KEY" # should have this set somewhere else 
+    git config user.signingkey "$GITHUB_GPG_KEY"
     echo "Set email, name, and signing key for this repo."
 }
