@@ -1,11 +1,10 @@
 function grit() {
     if [ ! -d ".git" ]; then
-        read -p "Not in a git repo, run git init? " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Yy]$ ]]; then
-            git init
+        if read -q '?Not in a git repo, run git init? '; then
+        	echo
+        	git init
         else
-            return
+            	return
         fi
     fi
     git config user.email "$GITHUB_EMAIL"
